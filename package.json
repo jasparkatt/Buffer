@@ -1,17 +1,31 @@
 {
-  "name": "ippapp",
+  "name": "awsbuffer",
   "version": "1.0.0",
-  "description": "Ipp buffer app",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nmget": "nmget"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jasparkatt/buffer.git"
-  },
-  "author": "jaspar katt",
+  "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "copy-node-modules": "^1.0.2",
+    "gulp": "github:gulpjs/gulp",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.1",
+    "gulp-exclude-gitignore": "^1.2.0",
+    "gulp-html-minifier2": "^1.1.8",
+    "gulp-jshint": "^2.0.4",
+    "gulp-jsonminify": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.6.3",
+    "gulp-sqwish": "^1.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.9.5"
+  },
   "dependencies": {
     "leaflet": "^1.2.0",
     "leaflet-buffer": "^0.3.0",
