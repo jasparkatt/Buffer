@@ -11,7 +11,7 @@ body { margin:0; padding:0; }
 
 }
 .leaflet-bar a.leaflet-control-touchhover-toggle {
-    background: url("/dist/img/Mouse.png") #e6de00;
+    background: url("/dist/img/Mouse.png");
     background-size: contain;
 }
 
@@ -21,6 +21,6 @@ body { margin:0; padding:0; }
 
 
 .leaflet-bar a.leaflet-control-touchhover-toggled {
-    background: url("/dist/img/Phone.png") #e6de00;
+    background: url("/dist/img/Phone.png") #ffe3e3;
     background-size: contain;
 }
