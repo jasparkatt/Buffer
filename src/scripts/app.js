@@ -12,7 +12,7 @@ L.control.layers({
     "google": L.tileLayer('http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {
         attribution: 'google'
     })
-}, {'drawlayer':drawnItems}, { position: 'topright', collapsed: false }).addTo(map);
+}, {'drawlayer': drawnItems}, { position: 'topright', collapsed: false }).addTo(map);
 map.addControl(new L.Control.Draw({
     edit: {
         featureGroup: drawnItems,
@@ -23,12 +23,12 @@ map.addControl(new L.Control.Draw({
     draw: {
         polygon : {
             allowIntersection: false,
-            showArea:true
+            showArea: true
         }
     }
 }));
 // Truncate value based on number of decimals
-var _round = function(num, len) {
+var _round = function (num, len) {
     return Math.round(num*(Math.pow(10, len)))/(Math.pow(10, len));
 };
 // Helper method to format LatLng object (x.xxxxxx, y.yyyyyy)
@@ -86,4 +86,4 @@ map.on(L.Draw.Event.EDITED, function(event) {
             layer.setPopupContent(content);
         }
     });
-        });
+});
