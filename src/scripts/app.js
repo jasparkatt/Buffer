@@ -21,12 +21,19 @@ map.addControl(new L.Control.Draw({
         }
     },
     draw: {
-        polygon : {
-            allowIntersection: false,
-            showArea: false,
-            metric: false
+        polyline: {
+            shapeOptions: {
+                color: 'orange'
+            },            
         }
-    }
+    },
+//    draw: {
+//        polygon : {
+//            allowIntersection: false,
+//            showArea: false,
+//            metric: false
+//        }
+//    }
 }));
 // Truncate value based on number of decimals
 var _round = function (num, len) {
@@ -52,7 +59,7 @@ var getPopupContent = function(layer) {
     } else if (layer instanceof L.Polygon) {
         var latlngs = layer._defaultShape ? layer._defaultShape() : layer.getLatLngs(),
             area = L.GeometryUtil.geodesicArea(latlngs);
-        return "Area: "+L.GeometryUtil.readableArea(area, true);
+        return "Area: "+L.GeometryUtil.readableArea(area, false);
         // Polyline - distance
     } else if (layer instanceof L.Polyline) {
         var latlngs = layer._defaultShape ? layer._defaultShape() : layer.getLatLngs(),
@@ -63,7 +70,7 @@ var getPopupContent = function(layer) {
             for (var i = 0; i < latlngs.length-1; i++) {
                 distance += latlngs[i].distanceTo(latlngs[i+1]);
             }
-            return "Distance: "+_round(distance, 2)+" m";
+            return "Distance: "+_round((distance*3.2808399), 2)+" ft";
         }
     }
     return null;
