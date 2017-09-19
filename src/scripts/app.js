@@ -23,7 +23,9 @@ map.addControl(new L.Control.Draw({
     draw: {
         polygon : {
             allowIntersection: false,
-            showArea: true
+            showArea: false,
+            metric: false,
+            color: '#eab75b'
         }
     }
 }));
