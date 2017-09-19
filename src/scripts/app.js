@@ -25,7 +25,8 @@ map.addControl(new L.Control.Draw({
             shapeOptions: {
                 color: 'orange'
             },            
-        }
+        },
+        circlemarker: false
     },
 //    draw: {
 //        polygon : {
