@@ -35,7 +35,7 @@ map.addControl(new L.Control.Draw({
         },
         polygon: {
             shapeOptions: {
-                color: '#cc6600'
+                color: '#fa9025'
             },
 //            showArea: true,
 //            metric: false
