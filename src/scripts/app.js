@@ -23,18 +23,32 @@ map.addControl(new L.Control.Draw({
     draw: {
         polyline: {
             shapeOptions: {
-                color: 'orange'
+                color: '#347c17'
             },            
+        },
+        circle: {
+            shapeOptions: {
+                 color: 'midnightblue'
+            },
+            showArea: true,
+            metric: false
+        },
+        polygon: {
+            shapeOptions: {
+                color: '#cc6600'
+            },
+//            showArea: true,
+//            metric: false
         },
         circlemarker: false
     },
-//    draw: {
-//        polygon : {
-//            allowIntersection: false,
-//            showArea: false,
-//            metric: false
-//        }
-//    }
+    //    draw: {
+    //        polygon : {
+    //            allowIntersection: false,
+    //            showArea: false,
+    //            metric: false
+    //        }
+    //    }
 }));
 // Truncate value based on number of decimals
 var _round = function (num, len) {
@@ -51,11 +65,11 @@ var getPopupContent = function(layer) {
     if (layer instanceof L.Marker || layer instanceof L.CircleMarker) {
         return strLatLng(layer.getLatLng());
         // Circle - lat/long, radius
-    } else if (layer instanceof L.Circle) {
-        var center = layer.getLatLng(),
-            radius = layer.getRadius();
-        return "Center: "+strLatLng(center)+"<br />"
-            +"Radius: "+_round(radius, 2)+" m";
+//    } else if (layer instanceof L.Circle) {
+//        var center = layer.getLatLng();
+////            radius = layer.getRadius();
+//        return "Center: "+strLatLng(center)+"<br />";
+////            +"Radius: "+_round(radius, 2)+" m";
         // Rectangle/Polygon - area
     } else if (layer instanceof L.Polygon) {
         var latlngs = layer._defaultShape ? layer._defaultShape() : layer.getLatLngs(),
