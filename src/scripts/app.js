@@ -18,17 +18,21 @@ map.addControl(new L.Control.Draw({
         featureGroup: drawnItems,
         poly : {
             allowIntersection : false
-        }
+        },
+        buffer: {
+            replacePolylines: false,
+            separateBuffer: true
+        },
     },
     draw: {
         polyline: {
             shapeOptions: {
-                color: '#347c17'
+                color: '#92d625'
             },            
         },
         circle: {
             shapeOptions: {
-                 color: 'midnightblue'
+                 color: '#93abfc'
             },
             showArea: true,
             metric: false
