@@ -44,7 +44,8 @@ map.addControl(new L.Control.Draw({
 //            showArea: true,
 //            metric: false
         },
-        circlemarker: false
+        circlemarker: false,
+        marker: false
     },
     //    draw: {
     //        polygon : {
