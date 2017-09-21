@@ -62,7 +62,7 @@ gulp.task('runnmp', shell.task('node nmget'));
 
 // Delete all but necessary leaflet files/folders in dist folder
 gulp.task('cleanout', function(){
-    return del(['dist/node_modules/leaflet/src'])
+    return del(['dist/node_modules/leaflet/src','dist/node_modules/leaflet/*.*','dist/node_modules/leaflet-buffer/.*','dist/node_modules/leaflet-buffer/*.*','dist/node_modules/leaflet-buffer/src','dist/node_modules/leaflet-draw/docs','dist/node_modules/leaflet-draw/*.*'])
 });
 
 
