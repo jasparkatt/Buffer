@@ -30,6 +30,7 @@
   "dependencies": {
     "leaflet": "^1.2.0",
     "leaflet-buffer": "^0.3.0",
-    "leaflet-draw": "^0.4.12"
+    "leaflet-draw": "^0.4.12",
+    "jsts": "^1.4.0"
   }
 }
