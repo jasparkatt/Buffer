@@ -1,6 +1,6 @@
 //JS and Leaflet stuff for IPP buffer tool app
 var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors & Adams Co. GIS',
     osm = L.tileLayer(osmUrl, {maxZoom: 19, attribution: osmAttrib}),
     map = new L.Map('map', {center: new L.LatLng(43.955280, -89.816920), zoom: 13}),
     drawnItems = L.featureGroup().addTo(map);
@@ -10,7 +10,7 @@ if (L.Browser.touch) {
 L.control.layers({
     "osm": osm.addTo(map),
     "google": L.tileLayer('http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {
-        attribution: 'google'
+        attribution: 'google & Adams Co. GIS'
     })
 }, {'drawlayer': drawnItems}, { position: 'topright', collapsed: false }).addTo(map);
 map.addControl(new L.Control.Draw({
