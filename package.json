@@ -12,6 +12,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "copy-node-modules": "^1.0.2",
+    "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.0.1",

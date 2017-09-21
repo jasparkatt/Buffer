@@ -13,6 +13,7 @@ var shell = require('gulp-shell');
 var copy = require('gulp-copy');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var del = require('del');
 
 // copy icons from src to dist
 gulp.task('copys', function(){
@@ -59,6 +60,12 @@ gulp.task('htmlmins', function(){
 // Copy necessary node modules for map app from global node_modules folder e.g leaflet stuff
 gulp.task('runnmp', shell.task('node nmget'));
 
+// Delete all but necessary leaflet files/folders in dist folder
+gulp.task('cleanout', function(){
+    return del(['dist/node_modules/leaflet/src'])
+});
+
+
 // watch for file changes to do anything
 gulp.task('watch', function(){
     gulp.watch('./*.html',['htmlmins']);
@@ -76,4 +83,4 @@ gulp.task('browser-sync', function(){
     });
 });
 // Default Gulp tasks run on 'gulp' command
-gulp.task('default',['copys','copyfav','styles','scripts','htmlmins','runnmp','watch','browser-sync']);
+gulp.task('default',['copys','copyfav','styles','scripts','htmlmins','runnmp','cleanout','watch','browser-sync']);
