@@ -76,7 +76,7 @@ gulp.task('watch', function(){
 
 // start server
 gulp.task('browser-sync', function(){
-    browserSync(['dist/style/style.min.css', 'dist/js/*.js', 'dist/index.min.html', 'dist/node_modules/**/*.*', 'dist/img/*.png'], {
+    browserSync.init(['/style'], {
         server: {
             baseDir: "./"
         }
