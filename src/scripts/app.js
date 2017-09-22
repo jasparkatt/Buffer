@@ -5,7 +5,7 @@ var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     map = new L.Map('map', {center: new L.LatLng(43.955280, -89.816920), zoom: 13}),
     drawnItems = L.featureGroup().addTo(map);
     map.createPane('buffers');
-    map.getPane('buffers').style.zIndex = 2000;
+    map.getPane('buffers').style.zIndex = 25;
     map.getPane('buffers').style.pointerEvents = 'none';
 if (L.Browser.touch) {
     L.control.touchHover().addTo(map);
@@ -36,7 +36,7 @@ map.addControl(new L.Control.Draw({
         },
         circle: {
             shapeOptions: {
-                 color: '#e3ff86'
+                 color: '#bce33a'
             },
             showArea: true,
             metric: false
