@@ -3,10 +3,8 @@ var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors & Adams Co. GIS',
     osm = L.tileLayer(osmUrl, {maxZoom: 19, attribution: osmAttrib}),
     map = new L.Map('map', {center: new L.LatLng(43.955280, -89.816920), zoom: 13}),
-    drawnItems = L.featureGroup().addTo(map);
-    map.createPane('buffers');
-    map.getPane('buffers').style.zIndex = 25;
-    map.getPane('buffers').style.pointerEvents = 'none';
+    drawnItems = L.featureGroup().addTo(map);    
+
 if (L.Browser.touch) {
     L.control.touchHover().addTo(map);
 }
@@ -24,34 +22,33 @@ map.addControl(new L.Control.Draw({
         },
         buffer: {
             replacePolylines: false,
-            separateBuffer: true,
-            pane: 'buffers'
+            separateBuffer: true
         },
     },
     draw: {
         polyline: {
             shapeOptions: {
-                color: '#92d625'
+                color: '#ff0000'
             },            
         },
         circle: {
             shapeOptions: {
-                 color: '#bce33a'
+                 color: '#0600a8'
             },
             showArea: true,
             metric: false
         },
         polygon: {
             shapeOptions: {
-                color: '#fa9025'
+                color: '#e93fff'
             },
 //            showArea: true,
 //            metric: false
         },
         circlemarker: false,
         marker: false,
-        rectangle: false
-    },
+        rectangle: false        
+    },    
     //    draw: {
     //        polygon : {
     //            allowIntersection: false,
