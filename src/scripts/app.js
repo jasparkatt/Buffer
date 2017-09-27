@@ -33,7 +33,8 @@ map.addControl(new L.Control.Draw({
         },
         circle: {
             shapeOptions: {
-                 color: '#0600a8'
+                 color: '#c1a11b',
+                 fillColor: '#0033dd'
             },
             showArea: true,
             metric: false
