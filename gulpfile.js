@@ -25,7 +25,7 @@ gulp.task('copys', function(){
 gulp.task('copyfav', function(){
     return gulp.src('./favicon.ico')
     .pipe(copy('dist', {prefix:1}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('./'));
 });
 
 
@@ -75,12 +75,12 @@ gulp.task('watch', function(){
     });
 
 // start server
-gulp.task('browser-sync', function(){
-    browserSync.init(['/style'], {
-        server: {
-            baseDir: "./"
-        }
-    });
-});
+//gulp.task('browser-sync', function(){
+//    browserSync.init(['/style'], {
+//        server: {
+//            baseDir: "./"
+//        }
+//    });
+//});
 // Default Gulp tasks run on 'gulp' command
 gulp.task('default',['copys','copyfav','styles','scripts','htmlmins','runnmp','cleanout','watch','browser-sync']);
