@@ -14,6 +14,7 @@ var copy = require('gulp-copy');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var del = require('del');
+var gulpSequence = require('gulp-sequence');
 
 // copy icons from src to dist
 gulp.task('copys', function(){
@@ -62,7 +63,7 @@ gulp.task('runnmp', shell.task('node nmget'));
 
 // Delete all but necessary leaflet files/folders in dist folder
 gulp.task('cleanout', function(){
-    return del(['dist/node_modules/leaflet/src','dist/node_modules/leaflet/*.*','dist/node_modules/leaflet-buffer/.*','dist/node_modules/leaflet-buffer/*.*','dist/node_modules/leaflet-buffer/src','dist/node_modules/leaflet-draw/docs','dist/node_modules/leaflet-draw/*.*'])
+    return del(['dist/node_modules/leaflet/src','dist/node_modules/leaflet/*.*','dist/node_modules/leaflet-buffer/.*','dist/node_modules/leaflet-buffer/*.*','dist/node_modules/leaflet-buffer/src','dist/node_modules/leaflet-draw/docs','dist/node_modules/leaflet-draw/*.*','dist/node_modules/jsts/java','dist/node_modules/jsts/org','dist/node_modules/jsts/*.*'])
 });
 
 
@@ -83,4 +84,6 @@ gulp.task('watch', function(){
 //    });
 //});
 // Default Gulp tasks run on 'gulp' command
-gulp.task('default',['copys','copyfav','styles','scripts','htmlmins','runnmp','cleanout','watch','browser-sync']);
+gulp.task('sequence_1', gulpSequence(['copys','copyfav','styles','scripts','htmlmins','runnmp'], 'cleanout'))
+
+//gulp.task('default',['copys','copyfav','styles','scripts','htmlmins','runnmp','sequence_1']);

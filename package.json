@@ -21,6 +21,7 @@
     "gulp-jshint": "^2.0.4",
     "gulp-jsonminify": "^1.0.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sequence": "^0.4.6",
     "gulp-shell": "^0.6.3",
     "gulp-sqwish": "^1.0.0",
     "gulp-uglify": "^3.0.0",
