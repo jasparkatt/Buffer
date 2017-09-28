@@ -3,6 +3,7 @@ Testing feasibility of using [Leaflet](http://leafletjs.com/), [Leaflet.draw](ht
 
 ## Getting Started
 Assumes [Node JS](https://nodejs.org/en/) exists;
+
 Then:
 
 `Git Clone https://github.com/jasparkatt/Buffer.git`
@@ -10,3 +11,7 @@ Then:
 `npm install -g gulp` *global install*
 
 `npm install --save-dev gulp` *local install*
+
+`npm install`
+
+`gulp sequence_1`
