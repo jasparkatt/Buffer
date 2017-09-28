@@ -1,2 +1,2 @@
-# Buffer
-Testing feasibility of using Leaflet, Leaflet.draw & Leaflet.buffer as lightweight application to aid in a S & R situation. Simple search buffer parameters pulled from "Lost Person Behavior" by Robert J. Kloester.
+# Easy Buffer Tool Prototype
+Testing feasibility of using [Leaflet](http://leafletjs.com/), [Leaflet.draw](https://github.com/Leaflet/Leaflet.draw) & [Leaflet.buffer](https://github.com/skeate/Leaflet.buffer) with [Leaflet.TouchHover](https://github.com/mourner/Leaflet.TouchHover) for mobile support, as a lightweight application to aid in a SAR or recovery situation. Simple search buffer parameters pulled from *Lost Person Behavior* by **Robert J. Kloester**, 2008.
