@@ -6,5 +6,7 @@ Assumes [Node JS](https://nodejs.org/en/) exists;
 Then:
 
 `Git Clone https://github.com/jasparkatt/Buffer.git`
-`npm install -g gulp`   *global install*
-`npm install --save-dev gulp`   *local install*
+
+`npm install -g gulp` *global install*
+
+`npm install --save-dev gulp` *local install*
