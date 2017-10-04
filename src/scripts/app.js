@@ -22,13 +22,16 @@ map.addControl(new L.Control.Draw({
         },
         buffer: {
             replacePolylines: false,
-            separateBuffer: true
+            separateBuffer: true,
+            zIndexOffset: 1
         },
     },
     draw: {
         polyline: {
             shapeOptions: {
-                color: '#ff0000'
+                color: '#f0592b',
+                opacity: '0.8'
+                
             },            
         },
         circle: {
@@ -37,14 +40,14 @@ map.addControl(new L.Control.Draw({
                  fillColor: '#0033dd'
             },
             showArea: true,
-            metric: false
+            metric: false,
+            zIndexOffset: 9000
         },
         polygon: {
             shapeOptions: {
                 color: '#e93fff'
             },
-//            showArea: true,
-//            metric: false
+            zIndexOffset: 8000
         },
         circlemarker: false,
         marker: false,
