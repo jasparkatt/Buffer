@@ -20,7 +20,7 @@ var gulpSequence = require('gulp-sequence');
 gulp.task('copys', function(){
     return gulp.src('src/img/*.png')
     .pipe(copy('dist',{prefix:1}))
-    .pipe(gulp.dest('img'));
+    .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('copyfav', function(){
