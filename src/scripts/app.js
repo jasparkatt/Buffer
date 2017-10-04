@@ -36,8 +36,8 @@ map.addControl(new L.Control.Draw({
         },
         circle: {
             shapeOptions: {
-                 color: '#c1a11b',
-                 fillColor: '#0033dd'
+                 color: '#f7ff00',
+                 fillColor: '#0900ff'
             },
             showArea: true,
             metric: false,
@@ -45,7 +45,8 @@ map.addControl(new L.Control.Draw({
         },
         polygon: {
             shapeOptions: {
-                color: '#e93fff'
+                color: '#dd02ff',
+                fillColor: '#24ff02'
             },
             zIndexOffset: 8000
         },
