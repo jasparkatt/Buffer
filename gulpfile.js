@@ -75,14 +75,7 @@ gulp.task('watch', function(){
     gulp.watch('./package.json',['runnmp']);
     });
 
-// start server
-//gulp.task('browser-sync', function(){
-//    browserSync.init(['/style'], {
-//        server: {
-//            baseDir: "./"
-//        }
-//    });
-//});
+
 // Default Gulp tasks run on 'gulp' command
 gulp.task('sequence_1', gulpSequence(['copys','copyfav','styles','scripts','htmlmins','runnmp'], 'cleanout'))
 
