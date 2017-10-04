@@ -15,6 +15,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var del = require('del');
 var gulpSequence = require('gulp-sequence');
+var merge = require('merge-stream');
 
 // copy icons from src to dist
 gulp.task('copys', function(){
@@ -32,10 +33,13 @@ gulp.task('copyfav', function(){
 
 //Styles Tasks
 gulp.task('styles', function(){
-    return gulp.src('src/style/style.css')
+    var myCss = gulp.src('src/style/style.css')
     .pipe(sqwish('style.css'))
-    .pipe(rename('style.min.css'))
+    .pipe(rename('style.min.css'))    
+    .pipe(gulp.dest('dist/style'));    
+    var bootstrap = gulp.src('src/style/bootstrap.min.css')
     .pipe(gulp.dest('dist/style'));
+    return merge(myCss, bootstrap);
 });
 
 // Script tasks(js)

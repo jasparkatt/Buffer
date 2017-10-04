@@ -26,7 +26,8 @@
     "gulp-sqwish": "^1.0.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.5",
+    "merge-stream": "^1.0.1"
   },
   "dependencies": {
     "leaflet": "^1.2.0",
