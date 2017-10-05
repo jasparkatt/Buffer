@@ -52,11 +52,17 @@ gulp.task('scripts', function(){
 
 // Minify html
 gulp.task('htmlmins', function(){
-    return gulp.src('./index.html')
+    var indx = gulp.src('./index.html')
     .pipe(htmlmin({removeComments: true}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(rename('index.min.html'))
     .pipe(gulp.dest('./dist'));
+    var hlp = gulp.src('./help.html')
+    .pipe(htmlmin({removeComments: true}))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(rename('help.min.html'))
+    .pipe(gulp.dest('./dist'));
+    return merge(indx, hlp);
 });
 
 // Copy necessary node modules for map app from global node_modules folder e.g leaflet stuff
