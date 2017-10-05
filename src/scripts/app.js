@@ -63,6 +63,12 @@ map.addControl(new L.Control.Draw({
     //        }
     //    }
 }));
+
+L.easyButton('<span class="star">&starf;</span>', function() {
+    var ant = [-77, 70];
+    map.setView(ant);
+}).addTo(map);
+
 // Truncate value based on number of decimals
 var _round = function (num, len) {
     return Math.round(num*(Math.pow(10, len)))/(Math.pow(10, len));
@@ -123,3 +129,4 @@ map.on(L.Draw.Event.EDITED, function(event) {
         }
     });
 });
+
