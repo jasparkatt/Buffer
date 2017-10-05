@@ -63,11 +63,11 @@ map.addControl(new L.Control.Draw({
     //        }
     //    }
 }));
+var myImage = '<img class="button-image" src="img/About.png" />';
 
-L.easyButton('<span class="star">&starf;</span>', function() {
-    var ant = [-77, 70];
-    map.setView(ant);
-}).addTo(map);
+L.easyButton(myImage, function(btn, map) {
+    onclick: window.open("./help.html");
+},'Open help document').addTo(map);
 
 // Truncate value based on number of decimals
 var _round = function (num, len) {

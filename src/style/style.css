@@ -21,3 +21,10 @@ body { margin:0; padding:0; }
     background: url("/dist/img/Phone.png") #ffffff;
     background-size: contain;
 }
+
+.button-image {
+    display: inline-block;
+    height: auto;
+    margin: auto;
+}
+
