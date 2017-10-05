@@ -17,10 +17,6 @@ body { margin:0; padding:0; }
 }
 
 
-
-
-
-
 .leaflet-bar a.leaflet-control-touchhover-toggled {
     background: url("/dist/img/Phone.png") #ffffff;
     background-size: contain;

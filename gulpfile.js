@@ -33,13 +33,10 @@ gulp.task('copyfav', function(){
 
 //Styles Tasks
 gulp.task('styles', function(){
-    var myCss = gulp.src('src/style/style.css')
+    return gulp.src('src/style/style.css')
     .pipe(sqwish('style.css'))
     .pipe(rename('style.min.css'))    
     .pipe(gulp.dest('dist/style'));    
-    var bootstrap = gulp.src('src/style/bootstrap.min.css')
-    .pipe(gulp.dest('dist/style'));
-    return merge(myCss, bootstrap);
 });
 
 // Script tasks(js)
@@ -67,7 +64,7 @@ gulp.task('runnmp', shell.task('node nmget'));
 
 // Delete all but necessary leaflet files/folders in dist folder
 gulp.task('cleanout', function(){
-    return del(['dist/node_modules/leaflet/src','dist/node_modules/leaflet/*.*','dist/node_modules/leaflet-buffer/.*','dist/node_modules/leaflet-buffer/*.*','dist/node_modules/leaflet-buffer/src','dist/node_modules/leaflet-draw/docs','dist/node_modules/leaflet-draw/*.*','dist/node_modules/jsts/java','dist/node_modules/jsts/org','dist/node_modules/jsts/*.*'])
+    return del(['dist/node_modules/leaflet/src','dist/node_modules/leaflet/*.*','dist/node_modules/leaflet-buffer/.*','dist/node_modules/leaflet-buffer/*.*','dist/node_modules/leaflet-buffer/src','dist/node_modules/leaflet-draw/docs','dist/node_modules/leaflet-draw/*.*','dist/node_modules/jsts/java','dist/node_modules/jsts/org','dist/node_modules/jsts/*.*','dist/node_modules/leaflet-easybutton/*.*'])
 });
 
 

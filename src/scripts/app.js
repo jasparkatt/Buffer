@@ -1,4 +1,5 @@
 //JS and Leaflet stuff for IPP buffer tool app
+
 var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors & Adams Co. GIS',
     osm = L.tileLayer(osmUrl, {maxZoom: 19, attribution: osmAttrib}),
