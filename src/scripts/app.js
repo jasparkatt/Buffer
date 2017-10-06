@@ -73,7 +73,7 @@ var toggle = L.easyButton ({
         icon: myImage,
         title: 'open help doc',
         onClick: function() {
-            myWindow = window.open("./help.min.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+            myWindow = window.open("https://camo.githubusercontent.com/8cecbb8038c8eb9a2029a114bcc8993dd893d17a/687474703a2f2f692e696d6775722e636f6d2f464954637061732e676966", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
             toggle.state('remove-help');
         }
     }, {

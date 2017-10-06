@@ -12,13 +12,13 @@ body { margin:0; padding:0; }
 }
 .leaflet-bar a.leaflet-control-touchhover-toggle {
     box-shadow: none;
-    background: url("/dist/img/Mouse.png") #ffffff;
+    background: url("/img/Mouse.png") #ffffff;
     background-size: contain;
 }
 
 
 .leaflet-bar a.leaflet-control-touchhover-toggled {
-    background: url("/dist/img/Phone.png") #ffffff;
+    background: url("/img/Phone.png") #ffffff;
     background-size: contain;
 }
 
