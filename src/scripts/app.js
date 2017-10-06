@@ -1,11 +1,10 @@
 //JS and Leaflet stuff for IPP buffer tool app
-
 var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors & Adams Co. GIS',
     osm = L.tileLayer(osmUrl, {maxZoom: 19, attribution: osmAttrib}),
     map = new L.Map('map', {center: new L.LatLng(43.955280, -89.816920), zoom: 13}),
     drawnItems = L.featureGroup().addTo(map);    
-
+//add mobile touch
 if (L.Browser.touch) {
     L.control.touchHover().addTo(map);
 }
@@ -63,11 +62,31 @@ map.addControl(new L.Control.Draw({
     //        }
     //    }
 }));
-var myImage = '<img class="button-image" src="img/About.png" />';
 
-L.easyButton(myImage, function(btn, map) {
-    onclick: window.open("./help.html");
-},'Open help document').addTo(map);
+//add help button and redirect to help doc
+var myImage = '<img class="button-image" src="img/About.png" />';
+var myWindow;
+var toggle = L.easyButton ({
+    position: 'bottomleft',
+    states: [{
+        stateName: 'open-help',
+        icon: myImage,
+        title: 'open help doc',
+        onClick: function() {
+            myWindow = window.open("./help.min.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+            toggle.state('remove-help');
+        }
+    }, {
+        icon: myImage,
+        stateName: 'remove-help',
+        onClick: function() {
+            myWindow.close();
+            toggle.state('open-help');
+        },
+        title: 'close help doc'
+    }]
+});
+toggle.addTo(map);
 
 // Truncate value based on number of decimals
 var _round = function (num, len) {

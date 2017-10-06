@@ -30,10 +30,10 @@
     "merge-stream": "^1.0.1"
   },
   "dependencies": {
-    "jsts": "^1.4.0",
-    "leaflet": "^1.2.0",
-    "leaflet-buffer": "^0.3.0",
-    "leaflet-draw": "^0.4.12",
-    "leaflet-easybutton": "^2.2.4"
+    "jsts": "1.4.0",
+    "leaflet": "1.2.0",
+    "leaflet-buffer": "0.3.0",
+    "leaflet-draw": "0.4.12",
+    "leaflet-easybutton": "2.2.4"
   }
 }
