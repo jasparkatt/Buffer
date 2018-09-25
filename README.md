@@ -6,7 +6,7 @@ Assumes [Node JS](https://nodejs.org/en/) and [Gulp](https://gulpjs.com/) exist;
 
 Then:
 
-`Git Clone https://github.com/jasparkatt/Buffer.git`
+`git clone https://github.com/jasparkatt/Buffer.git`
 
 `cd Buffer`
 
