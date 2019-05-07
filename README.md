@@ -16,5 +16,5 @@ Then:
 
 `gulp sequence_1`
 
-#### GH-page demo 
-[link](https://jasparkatt.github.io/Buffer/)
+##### GH-page link:
+[launch app](https://jasparkatt.github.io/Buffer/)
