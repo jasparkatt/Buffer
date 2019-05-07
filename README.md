@@ -15,3 +15,5 @@ Then:
 `npm install`
 
 `gulp sequence_1`
+
+# GH-page demo [HERE](https://jasparkatt.github.io/Buffer/)
