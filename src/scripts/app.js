@@ -2,7 +2,7 @@
 var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors & Adams Co. GIS',
     osm = L.tileLayer(osmUrl, {maxZoom: 19, attribution: osmAttrib}),
-    map = new L.Map('map', {center: new L.LatLng(43.955280, -89.816920), zoom: 13}),
+    map = new L.Map('map', {center: new L.LatLng(44.350131, -89.067050), zoom: 13}),
     drawnItems = L.featureGroup().addTo(map);    
 //add mobile touch
 if (L.Browser.touch) {
